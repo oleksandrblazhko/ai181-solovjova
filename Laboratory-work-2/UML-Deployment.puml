@@ -1,0 +1,55 @@
+@startuml
+title UML-діаграма розгортання ПП
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Android phone>>" as ph {
+    node "<<Operating System Android>" {
+        node "<<Application>>" {
+            component [UI of the application] as ui
+        }
+    }
+}
+
+
+node "<<Android Application>>" as app {
+component [SystemController] as syscontr
+component [ChatController] as chatcontr
+component [ReportService] as reportserv
+component [UserService] as userserv
+component [NewsService] as newsserv
+component [ChatService] as chatserv
+}
+
+syscontr <-- chatcontr
+ui --> syscontr
+
+chatcontr <-- chatserv
+syscontr <-- reportserv
+syscontr <-- userserv
+syscontr <-- newsserv
+
+
+
+node "<<Database Server>>" as servdb {
+	
+	    node "<<Database Server PostgreSQL>>" as db {
+	      database PostgreSQL as dbcomp
+	    
+	}
+}
+
+dbcomp <-- reportserv
+dbcomp <-- userserv
+dbcomp <-- newsserv
+
+
+
+node "<<AI Recognition API>>" as api {
+	
+}
+
+reportserv -->  api
+@enduml
