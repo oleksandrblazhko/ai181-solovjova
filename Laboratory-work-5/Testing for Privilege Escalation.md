@@ -79,4 +79,4 @@ X-Forwarded-For: 8.1.1.1
 
 Наприклад:
 
-startswith(), endswith(), містить
+startswith(), endswith()
