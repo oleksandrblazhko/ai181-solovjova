@@ -43,6 +43,7 @@ Create table university (u_id integer, name varchar, year integer);
 #### Додатково створіть ще одну термінальну консоль psql та та встановіть з’єднання з БД postgres від імені нового користувача
 
 Командою psql -U dianochka -d postgres виконано зʼєднання з БД PostgreSQL.
+
 ![image](https://user-images.githubusercontent.com/56130345/204788279-9070374c-ed9f-45bf-9be9-a73cba3ac82d.png)
 
 ## Крок 8
@@ -79,6 +80,7 @@ Create table university (u_id integer, name varchar, year integer);
 Як бачимо, в нас немає доступу до читання таблиці (у другому вікні). 
 
 SELECT * FROM university;
+
 ![image](https://user-images.githubusercontent.com/56130345/204789619-4b80e333-1d2a-441a-80d3-f17ef8e72cbb.png)
 
 ## Крок 13
@@ -107,6 +109,7 @@ UPDATE university SET u_id = 5; (друге вікно)
 Повноваження для видалення даних з таблиці відсутні.
 
 DELETE FROM university WHERE u_id = 5; (друге вікно)
+
 ![image](https://user-images.githubusercontent.com/56130345/204790826-a6500912-2912-4a51-8fda-20ec7a02f4c9.png)
 
 ## Крок 17
@@ -120,3 +123,31 @@ GRANT DELETE ON university TO dianochka; (перше вікно)
 #### Повторіть крок 16.
 
 DELETE FROM university WHERE u_id = 5; (друге вікно)
+![image](https://user-images.githubusercontent.com/56130345/204792098-9f34deb8-a4a1-4b6d-b296-ae16eff7b1cf.png)
+
+## Крок 19
+#### Зніміть всі повноваження з таблиці для нового користувача.
+
+REVOKE ALL ON university FROM dianochka;
+
+![image](https://user-images.githubusercontent.com/56130345/204792298-0c707e3d-e1c1-46a1-97c4-5af9b98c23db.png)
+
+## Крок 20
+#### Створіть команду внесення запису в таблицю (INSERT) і виконайте її від імені нового користувача. Проаналізуйте результат виконання команди.
+
+Повноваження для додавання даних у таблицю відсутні.
+![image](https://user-images.githubusercontent.com/56130345/204792421-e863812a-e277-4a2e-8211-603a3f34f844.png)
+
+## Крок 21
+#### Встановіть повноваження на внесення даних до таблиці для ролі.
+
+GRANT INSERT ON university TO dianochka; (перше вікно)
+![image](https://user-images.githubusercontent.com/56130345/204792578-eb9f53e3-742c-4b68-911d-7683e8105de2.png)
+
+## Крок 22
+#### Повторіть крок 20.
+
+![image](https://user-images.githubusercontent.com/56130345/204792682-7bc4cbf3-9590-464b-a0ea-6abfb059d560.png)
+
+
+
