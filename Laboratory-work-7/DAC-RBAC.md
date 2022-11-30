@@ -33,6 +33,7 @@ Create table university (u_id integer, name varchar, year integer);
 #### Внесіть один рядок в таблицю, використовуючи команду insert into ..., відповідно до варіанту.
 
 Командою Insert into university values (1, 'ONPU', 1918); введено дані у таблицю. Перевіримо, чи ввелись дані, командою SELECT * FROM university;
+
 ![image](https://user-images.githubusercontent.com/56130345/204786738-af51e8ca-71a1-4fd5-9852-672fd38fd747.png)
 
 
