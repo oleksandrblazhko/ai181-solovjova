@@ -1,11 +1,13 @@
 ## Крок 1
 #### Встановіть СКБД PostgreSQL
 Оскільки PostgreSQL вже була встановлена, перевіримо її наявність та версію командою psql --version. Бачимо, що встановлена версія PostgreSQL 14.5.
+
 ![image](https://user-images.githubusercontent.com/56130345/204784557-aae4fe00-4895-4ad4-bc97-0019112932b5.png)
 
 ## Крок 2
 #### Створіть термінальну консоль psql через утиліту командного рядка вашої ОС та встановіть з’єднання з БД postgres від імені користувача-адміністратора postgres
 Командою psql -U postgres -d postgres створено термінальну консоль. Також введено пароль користувача postgres та встановлен зʼєднання з БД.
+
 ![image](https://user-images.githubusercontent.com/56130345/204785338-71f1fb03-2383-4139-8a4b-5abc2c12c7da.png)
 
 ## Крок 3
@@ -20,6 +22,7 @@
 Створено роль soloviova.
 
 CREATE ROLE soloviova; GRANT soloviova TO dianochka;
+
 ![image](https://user-images.githubusercontent.com/56130345/204785960-459bc3c3-e70d-4a56-acf0-e64288e96ee1.png)
 
 ## Крок 5
