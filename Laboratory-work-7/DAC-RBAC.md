@@ -87,6 +87,7 @@ SELECT * FROM university;
 #### Створіть команду оновлення даних таблиці (UPDATE) і виконайте її від імені нового користувача. Проаналізуйте результат виконання команди.
 
 Спробуємо оновити дані в таблиці командою UPDATE university SET u_id = 5;. Як бачимо, прав на оновлення у користувача dianochka немає (друге вікно).
+
 ![image](https://user-images.githubusercontent.com/56130345/204789907-f70c3af8-cf8f-4aaa-8ade-854a39879890.png)
 
 ## Крок 14
@@ -123,6 +124,7 @@ GRANT DELETE ON university TO dianochka; (перше вікно)
 #### Повторіть крок 16.
 
 DELETE FROM university WHERE u_id = 5; (друге вікно)
+
 ![image](https://user-images.githubusercontent.com/56130345/204792098-9f34deb8-a4a1-4b6d-b296-ae16eff7b1cf.png)
 
 ## Крок 19
@@ -136,12 +138,14 @@ REVOKE ALL ON university FROM dianochka;
 #### Створіть команду внесення запису в таблицю (INSERT) і виконайте її від імені нового користувача. Проаналізуйте результат виконання команди.
 
 Повноваження для додавання даних у таблицю відсутні.
+
 ![image](https://user-images.githubusercontent.com/56130345/204792421-e863812a-e277-4a2e-8211-603a3f34f844.png)
 
 ## Крок 21
 #### Встановіть повноваження на внесення даних до таблиці для ролі.
 
 GRANT INSERT ON university TO dianochka; (перше вікно)
+
 ![image](https://user-images.githubusercontent.com/56130345/204792578-eb9f53e3-742c-4b68-911d-7683e8105de2.png)
 
 ## Крок 22
