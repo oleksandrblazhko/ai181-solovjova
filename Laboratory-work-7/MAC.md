@@ -31,15 +31,18 @@ SET spot_conf = 3;
 
 ## Крок 3
 #### Визначте для користувача його рівень доступу
+
 ![image](https://user-images.githubusercontent.com/56130345/205635450-ef5e80e5-6a0a-44f0-b0a2-4ad9a89a42c7.png)
 
 ## Крок 4
 #### Створіть нову схему даних.
 DROP SCHEMA IF EXISTS dianochka CASCADE;
 CREATE SCHEMA dianochka;
+
 ![image](https://user-images.githubusercontent.com/56130345/205636101-3c862ee1-94f4-497e-b401-4def448836b4.png)
 
 ALTER SCHEMA dianochka OWNER TO dianochka;
+
 ![image](https://user-images.githubusercontent.com/56130345/205636298-38d1fed6-2d69-4867-b97a-bcc9b26137ea.png)
 
 ## Крок 5
@@ -62,12 +65,14 @@ l.access_level >= s.spot_conf;
 #### Створіть INSERT/UPDATE/DELETE-правила повноважного керування доступом для користувача.
 
 ![image](https://user-images.githubusercontent.com/56130345/205637452-8aae0d93-467f-4474-a7a6-505ac2d1b237.png)
+
 REVOKE ALL ON public.university FROM dianochka;
 GRANT SELECT 
 ON dianochka.university 
 TO dianochka;
 
 ![image](https://user-images.githubusercontent.com/56130345/205637840-b3a50770-5a5f-44b6-a068-e261ec838fbd.png)
+
 SELECT * FROM public.university;
 SELECT * FROM dianochka.university;
 
@@ -78,6 +83,7 @@ SET spot_conf = 2
 WHERE u_id = 2;
 
 ![image](https://user-images.githubusercontent.com/56130345/205638152-76f4ad53-58c3-4027-a6f6-ed12c3ff0d7f.png)
+
 select * from university;
 
 GRANT DELETE 
@@ -87,6 +93,7 @@ TO dianochka;
 ![image](https://user-images.githubusercontent.com/56130345/205638327-c4c403ce-348c-4eff-908e-73cb3ae4db34.png)
 
 DELETE from university;
+
 ![image](https://user-images.githubusercontent.com/56130345/205638455-4795d2b2-5004-4e33-b2d8-0db8a72c75b1.png)
 
 CREATE RULE university_delete 
@@ -94,6 +101,7 @@ AS ON DELETE TO dianochka.university
 DO INSTEAD
 DELETE FROM public.university 
 WHERE u_id = OLD.u_id;
+
 ![image](https://user-images.githubusercontent.com/56130345/205638768-a4dfa6b3-2a25-4909-bb51-c1993235b6bf.png)
 
 ![image](https://user-images.githubusercontent.com/56130345/205638842-09c7e0f2-64ab-46eb-96e0-49024d9add27.png)
