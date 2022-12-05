@@ -106,6 +106,12 @@ WHERE u_id = OLD.u_id;
 
 ![image](https://user-images.githubusercontent.com/56130345/205638842-09c7e0f2-64ab-46eb-96e0-49024d9add27.png)
 
+Створення правил для INSERT та UPDATE:
+![image](https://user-images.githubusercontent.com/56130345/205645528-6274d614-55dd-4d2a-8943-036655092ec8.png)
+
+## Крок 7 
+#### Перевірте роботу механізму повноважного керування, виконавши операції SELECT, INSERT, UPDATE, DELETE
+![image](https://user-images.githubusercontent.com/56130345/205646199-aa4797e0-2aed-44f8-ad39-30dbe0729d17.png)
 
 
 
