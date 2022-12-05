@@ -32,3 +32,19 @@ REVOKE SELECT ON PUBLIC.university FROM DIANOCHKA;
 
 ## Крок 3
 #### Перевірте роботу механізму вибіркового керування, виконавши операції SELECT, INSERT, UPDATE, DELETE.
+
+SELECT * FROM university;
+![image](https://user-images.githubusercontent.com/56130345/205632590-ec75f1b1-eefd-40bc-8c86-1bb20d750bba.png)
+
+
+INSERT into university values (5, 'Bomber', 42342);
+![image](https://user-images.githubusercontent.com/56130345/205632619-5b079e42-ac2a-4435-9392-1991a4a0dfc7.png)
+
+
+UPDATE university SET u_id = 0;
+![image](https://user-images.githubusercontent.com/56130345/205632733-1d632845-20ec-484b-b032-eebdbc4749aa.png)
+
+DELETE FROM university WHERE u_id = 2;
+![image](https://user-images.githubusercontent.com/56130345/205632811-4688931e-42b0-46c8-92d6-e78005cdfe23.png)
+
+REVOKE SELECT ON PUBLIC.university FROM DIANOCHKA;
