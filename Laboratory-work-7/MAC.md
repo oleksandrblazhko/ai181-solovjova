@@ -2,6 +2,7 @@
 #### Створіть у БД структури даних, необхідні для роботи повноважного керування доступом.
 
 ![image](https://user-images.githubusercontent.com/56130345/205634232-b87ad3dd-af25-474a-ae4f-5264d53e7bc0.png)
+
 DROP TABLE IF EXISTS Access_Levels CASCADE;
 CREATE TABLE Access_Levels (
 access_level_id INTEGER PRIMARY KEY,
