@@ -34,6 +34,7 @@ REVOKE SELECT ON PUBLIC.university FROM DIANOCHKA;
 #### Перевірте роботу механізму вибіркового керування, виконавши операції SELECT, INSERT, UPDATE, DELETE.
 
 SELECT * FROM university;
+
 ![image](https://user-images.githubusercontent.com/56130345/205632590-ec75f1b1-eefd-40bc-8c86-1bb20d750bba.png)
 
 
