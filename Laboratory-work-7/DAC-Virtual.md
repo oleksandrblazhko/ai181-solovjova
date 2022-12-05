@@ -47,5 +47,3 @@ UPDATE university SET u_id = 0;
 
 DELETE FROM university WHERE u_id = 2;
 ![image](https://user-images.githubusercontent.com/56130345/205632811-4688931e-42b0-46c8-92d6-e78005cdfe23.png)
-
-REVOKE SELECT ON PUBLIC.university FROM DIANOCHKA;
