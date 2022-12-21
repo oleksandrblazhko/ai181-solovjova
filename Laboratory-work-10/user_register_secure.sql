@@ -3,7 +3,7 @@ RETURNS INTEGER
 AS $$
 BEGIN
 IF NOT EXISTS (SELECT FROM UserPassComboJay WHERE passname = v_password) THEN
-IF password_is_correct_v6(v_password) THEN
+IF password_is_correct_v3(v_password) THEN
 INSERT INTO users (user_name, password_hash)
 VALUES (v_user_name, md5(v_password));
 RETURN 1;
